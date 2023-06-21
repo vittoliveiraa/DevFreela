@@ -45,5 +45,11 @@ namespace DevFreela.API.Controllers
             return NoContent();
         }
 
+        [HttpPut("{id}/login")]
+        public IActionResult Login()
+        {
+            return NoContent();
+        }    
+
     }
 }
