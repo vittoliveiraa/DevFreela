@@ -7,36 +7,42 @@ namespace DevFreela.API.Controllers
     [Route("api/users")]
     public class UsersController : ControllerBase
     {
-        [HttpGet("ObterTodos")]
-        public IActionResult Get()
-        {
+        //[HttpGet("ObterTodos")]
+        //public IActionResult GetAll()
+        //{
             
-            return Ok();
-        }
+        //    return Ok();
+        //}
 
-        [HttpGet("ObterPorId/{id}")]
+        [HttpGet("{id}")]
         public IActionResult GetById(int id)
         {
 
             return Ok();
         }
 
-        [HttpPost("CriarUsuario")]
+        [HttpPost]
         public IActionResult Post([FromBody] CreateUserModel createUserModel) 
         {
             return CreatedAtAction(nameof(GetById), new {id = 1}, createUserModel);
         }
 
-        [HttpPut("AtualizarUsuario/{id}")]
-        public IActionResult Put(int id) //Colocar o que será atualizado 
+        [HttpPut("{id}/login")]
+        public IActionResult Login(int id, [FromBody] LoginModel login) 
         { 
-            return NoContent();    
+            return NoContent();
         }
+        //[HttpPut("AtualizarUsuario/{id}")]
+        //public IActionResult Put(int id) //Colocar o que será atualizado 
+        //{ 
+        //    return NoContent();    
+        //}
 
-        [HttpDelete("RemoverUsuario/{id}")]
-        public IActionResult Delete(int id, [FromBody] LoginModel login)
-        {
-            return Ok();
-        }
+        //[HttpDelete("RemoverUsuario/{id}")]
+        //public IActionResult Delete(int id, [FromBody] LoginModel login)
+        //{
+        //    return Ok();
+        //}
+
     }
 }

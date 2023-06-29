@@ -43,7 +43,7 @@ namespace DevFreela.Application.Services.Implementations
         public List<ProjectViewModel> GetAll(string query)
         {
             var projects = _dbContext.Projects;
-            var projectViewModel = projects.Select(p => new ProjectViewModel(p.Title, p.CreatedAt))
+            var projectViewModel = projects.Select(p => new ProjectViewModel(p.Id, p.Title, p.CreatedAt))
                                            .ToList();
             return projectViewModel;
         }
@@ -73,7 +73,7 @@ namespace DevFreela.Application.Services.Implementations
         {
             var project = _dbContext.Projects.SingleOrDefault(p => p.Id == inputModel.Id);
 
-            project.Update(inputModel.Title, inputModel.Description, inputModel.TotalCost)
+            project.Update(inputModel.Title, inputModel.Description, inputModel.TotalCost);
         }
     }
 }
