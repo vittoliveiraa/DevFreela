@@ -23,9 +23,10 @@ namespace DevFreela.Core.Entities
         public DateTime BirthDate { get; private set; }
         public DateTime CreatedAt { get; private set; }
         public bool Active { get; set; }   //Implementar Enum futuramente 
+
         public List<UserSkill> Skills { get; private set; }
         public List<Project> OwnedProjects { get; set; }
         public List<Project> FreelanceProjects { get; set; }
-
+        public List<ProjectComment> Comments { get; set; }
     }
 }

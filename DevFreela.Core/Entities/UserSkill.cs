@@ -10,5 +10,6 @@
 
         public int IdUser { get; set; }
         public int IdSkill { get; set; }
+        public Skill Skill { get; private set; }
     }
 }
