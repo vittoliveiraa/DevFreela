@@ -15,7 +15,7 @@ namespace DevFreela.Infrastructure.Persistence
         public DbSet<User> Users { get; set; }
         public DbSet<Skill> Skills { get; set; }
         public DbSet<UserSkill> UsersSkills { get; set; }
-        public DbSet<ProjectComment> Comments { get; set; }
+        public DbSet<ProjectComment> ProjectComments { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
