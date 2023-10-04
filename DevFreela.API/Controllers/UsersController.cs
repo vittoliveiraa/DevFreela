@@ -31,7 +31,6 @@ namespace DevFreela.API.Controllers
 
             return Ok(user);
         }
-
         // api/users
         [HttpPost]
         public async Task<IActionResult> Post([FromBody] CreateUserCommand command)
